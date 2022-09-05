@@ -1,0 +1,28 @@
+For identifying the count of a specific character in a stirng, regexp_count can be user.
+
+For example:
+String: 'character'
+
+If we want to identify the number of 'a' character in this string, then the query will be-
+
+select regexp_count('character', 'a') from dual
+
+Output: 2
+
+For specifying from which position the count will start, we've to add another parameter in the function.
+
+select regexp_count('character', 'a', 1) from dual
+
+Output: 2
+
+The above query asks for counting character from position 1.
+
+For identifying substring count, same query can be used.
+
+Substring: 'ab'
+String: 'abcabcabcabc'
+
+Query:
+select regexp_count('abcabcabcabc', 'ab', 1) from dual
+
+Output: 4
